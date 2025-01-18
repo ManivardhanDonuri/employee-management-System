@@ -1,0 +1,123 @@
+# Employee Management System
+
+This project is a command-line application that allows users to manage employee records using an SQLite database. The system provides functionalities to add, view, access, update, and delete employee records stored in the database `details.db`.
+
+---
+## Prerequisites
+- Python 3.x
+- SQLite3 library (built into Python)
+---
+
+
+## Features
+1. **Inserting Employee Records**
+   - Adds a new employee record to the database.
+   - Requires the user to provide:
+     - Employee ID
+     - Name
+     - Designation
+     - Salary
+
+2. **Viewing All Employee Records**
+   - Displays all employee records stored in the database.
+   - If no records are found, prompts the user to add new records.
+
+3. **Accessing a Particular Record**
+   - Retrieves and displays the details of an employee by their ID.
+   - Shows the ID, Name, Designation, and Salary if found.
+
+4. **Updating an Employee Record**
+   - Updates specific fields (Name, Designation, or Salary) of an employee based on their ID.
+   - Validates if the record exists before making changes.
+
+5. **Deleting an Employee Record**
+   - Deletes a specific employee record by ID.
+   - Prompts for confirmation before performing the deletion.
+
+6. **Exiting the Application**
+   - Terminates the program gracefully.
+
+---
+
+## Database Schema
+
+The `employee` table schema:
+```sql
+CREATE TABLE employee(
+    ID INTEGER PRIMARY KEY,
+    NAME TEXT NOT NULL,
+    DESIGNATION TEXT NOT NULL,
+    SALARY INTEGER
+);
+```
+
+---
+
+## How to Run
+1. Save the code to a Python file (e.g., `employee_management.py`).
+2. Open a terminal or command prompt.
+3. Run the program:
+   ```bash
+   python employee_management.py
+   ```
+4. Follow the on-screen menu to perform operations.
+
+---
+
+## Menu Options
+
+When running the program, you will see the following menu:
+
+```
+***********LIST OF THE OPERATIONS ************
+1. INSERTING AN employee RECORD INTO DATABASE
+2. VIEWING THE LIST OF employee RECORDS IN THE DATABASE
+3. ACCESSING A PARTICULAR RECORD FROM THE DATABASE
+4. UPDATE A PARTICULAR RECORD IN DATABASE
+5. DELETING A PARTICULAR RECORD IN DATABASE
+6. EXIT
+```
+
+Enter the number corresponding to the operation you want to perform.
+
+---
+
+## Example Workflow
+
+1. **Insert a Record:**
+   - Select option `1` and provide the required employee details.
+
+2. **View All Records:**
+   - Select option `2` to see all employee records.
+
+3. **Access a Record:**
+   - Select option `3` and enter the employee ID.
+
+4. **Update a Record:**
+   - Select option `4`, specify the employee ID, and choose the field to update.
+
+5. **Delete a Record:**
+   - Select option `5`, specify the employee ID, and confirm deletion.
+
+6. **Exit:**
+   - Select option `6` to exit the application.
+
+---
+
+## Error Handling
+- Validates user input to ensure correct data types (e.g., integers for IDs and salaries).
+- Checks for the existence of records before performing operations like update or delete.
+- Displays appropriate messages for invalid or non-existent IDs.
+
+---
+
+## Notes
+- Ensure the `details.db` file is created in the working directory before running the program.
+- Back up the database file if needed, as deleting records is irreversible.
+- The database operations are committed immediately to maintain data integrity.
+
+---
+
+## License
+This project is open-source and available for educational purposes.
+
