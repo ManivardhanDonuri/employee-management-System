@@ -112,7 +112,7 @@ Enter the number corresponding to the operation you want to perform.
 ---
 
 ## Notes
-- Ensure the `details.db` file is created in the working directory before running the program.
+- Ensure the `details.db` file is created in working directory before running the program.
 - Back up the database file if needed, as deleting records is irreversible.
 - The database operations are committed immediately to maintain data integrity.
 
